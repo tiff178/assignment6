@@ -50,7 +50,6 @@ scorefont = pygame.font.SysFont("impact", 20)
 img = pygame.image.load('goalie.png')
 img_b = pygame.image.load('soccer_ball.png')
 
-
 DARKNESS = pygame.Surface(SIZE)
 DARKNESS.set_alpha(200)
 DARKNESS.fill((0, 0, 0))
