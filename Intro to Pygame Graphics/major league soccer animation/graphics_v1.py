@@ -132,7 +132,7 @@ while not done:
     pygame.draw.rect(screen, GRAY, [150, 60, 20, 140])
     pygame.draw.ellipse(screen, GRAY, [150, 195, 20, 10])
 
-    #lights for pole 1 (refactored)
+    #lights (refactored) - left side of image
     pygame.draw.line(screen, GRAY, [110, 60], [210, 60], 2)
     for x in range(90, 190, 20):
         pygame.draw.ellipse(screen, light_color, [x + 20, 40, 20, 20])
@@ -145,7 +145,7 @@ while not done:
     pygame.draw.rect(screen, GRAY, [630, 60, 20, 140])
     pygame.draw.ellipse(screen, GRAY, [630, 195, 20, 10])
 
-    #lights for pole 2 (refactored) 
+    #lights (refactored) - right side of image
     pygame.draw.line(screen, GRAY, [590, 60], [690, 60], 2)
     for x in range(570, 670, 20):
         pygame.draw.ellipse(screen, light_color, [x + 20, 40, 20, 20])
@@ -154,26 +154,11 @@ while not done:
         pygame.draw.ellipse(screen, light_color, [x + 20, 20, 20, 20])
     pygame.draw.line(screen, GRAY, [590, 20], [690, 20], 2)
 
-    #net part 1 (middle left vertical lines) 
+      #net part 1 (refactored/shotrened code) - vertical lines of midddle portion of the goal
     y = 338
     for x in range(320, 360, 5):
         pygame.draw.line(screen, WHITE, [x+5, 140], [y+3, 200], 1)
         y += 3
-
-    # net part 1 (middle of the middle vertical lines)
-    y = 361
-    for x in range(360, 376, 4):
-       pygame.draw.line(screen, WHITE, [x+4, 140], [y+4, 200], 1)
-       y += 4
-    for x in range(376, 420, 4):
-        pygame.draw.line(screen, WHITE, [x+4, 140], [x+4, 200], 1)
-    #net part 1 (middle left vertical lines) 
-    y = 338
-    for x in range(320, 360, 5):
-        pygame.draw.line(screen, WHITE, [x+5, 140], [y+3, 200], 1)
-        y += 3
-
-    # net part 1 (middle of the middle vertical lines)
     y = 361
     for x in range(360, 376, 4):
        pygame.draw.line(screen, WHITE, [x+4, 140], [y+4, 200], 1)
@@ -190,20 +175,20 @@ while not done:
     for x in range(440, 475, 5):
         pygame.draw.line(screen, WHITE, [x+5, 140], [y+3, 200], 1)
         y += 3
-
-    # net part 2
+    
+    # net part 2 (refactored/shortened code) - whole net of left side of the goal
     y = 216
     for x in range (324, 338, 2):
         pygame.draw.line(screen, WHITE, [320, 140], [x+2, y-2], 1)
         y -= 2
     
-    #net part 3
+    #net part 3 (refacotred/shortened code) - while net of the right side of the goal
     x = 476
     for y in range(216, 202, -2):
         pygame.draw.line(screen, WHITE, [480, 140], [x-2, y-2], 1)
         x -= 2
-    
-    #net part 4
+
+    #net part 4 (refactored/shortened code) - horizontal lines of net in middle portion of the goal
     for y in range(144, 176, 4):
         pygame.draw.line(screen, WHITE, [324, y+4], [476, y+4], 1)
     pygame.draw.line(screen, WHITE, [335, 180], [470, 180], 1)
