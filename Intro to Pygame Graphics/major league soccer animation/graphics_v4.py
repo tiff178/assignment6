@@ -239,7 +239,7 @@ while not done:
         pygame.draw.line(screen, WHITE, [320, 140], [x+2, y-2], 1)
         y -= 2
     
-    #net part 3 (refacotred/shortened code) - while net of the right side of the goal
+    #net part 3 (refactored/shortened code) - while net of the right side of the goal
     x = 476
     for y in range(216, 202, -2):
         pygame.draw.line(screen, WHITE, [480, 140], [x-2, y-2], 1)
@@ -259,8 +259,7 @@ while not done:
     #stands left
     pygame.draw.polygon(screen, RED, [[120, 220], [0, 340], [0, 290], [120, 180]])
     pygame.draw.polygon(screen, WHITE, [[120, 180], [0, 100], [0, 290]])
-    #people
-    
+
     #corner flag right
     pygame.draw.line(screen, BRIGHT_YELLOW, [140, 220], [135, 190], 3)
     pygame.draw.polygon(screen, RED, [[132, 190], [125, 196], [135, 205]])
