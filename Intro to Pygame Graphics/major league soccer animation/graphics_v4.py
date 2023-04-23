@@ -201,7 +201,7 @@ while not done:
     pygame.draw.rect(screen, GRAY, [150, 60, 20, 140])
     pygame.draw.ellipse(screen, GRAY, [150, 195, 20, 10])
 
-    #lights (refactored) - left side of image
+    #lights for pole 1 (refactored)
     pygame.draw.line(screen, GRAY, [110, 60], [210, 60], 2)
     for x in range(90, 190, 20):
         pygame.draw.ellipse(screen, light_color, [x + 20, 40, 20, 20])
@@ -228,6 +228,15 @@ while not done:
     #light pole 2
     pygame.draw.rect(screen, GRAY, [630, 60, 20, 140])
     pygame.draw.ellipse(screen, GRAY, [630, 195, 20, 10])
+
+    #lights for pole 2 (refactored) 
+    pygame.draw.line(screen, GRAY, [590, 60], [690, 60], 2)
+    for x in range(570, 670, 20):
+        pygame.draw.ellipse(screen, light_color, [x + 20, 40, 20, 20])
+    pygame.draw.line(screen, GRAY, [590, 40], [690, 40], 2)
+    for x in range(570, 670, 20):
+        pygame.draw.ellipse(screen, light_color, [x + 20, 20, 20, 20])
+    pygame.draw.line(screen, GRAY, [590, 20], [690, 20], 2)
 
     #lights      
     # pygame.draw.line(screen, GRAY, [590, 60], [690, 60], 2)
