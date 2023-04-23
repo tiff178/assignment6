@@ -6,18 +6,15 @@ import random
 # Initialize game engine
 pygame.init()
 
-
 # Window
 SIZE = (800, 600)
 TITLE = "Major League Soccer"
 screen = pygame.display.set_mode(SIZE)
 pygame.display.set_caption(TITLE)
 
-
 # Timer
 clock = pygame.time.Clock()
 refresh_rate = 60
-
 
 # Colors
 ''' add colors you use as RGB values here '''
@@ -52,7 +49,6 @@ def draw_cloud(x, y):
     pygame.draw.ellipse(SEE_THROUGH, cloud_color, [x + 10, y, 16, 16])
     pygame.draw.ellipse(SEE_THROUGH, cloud_color, [x + 20, y + 8, 10, 10])
     pygame.draw.rect(SEE_THROUGH, cloud_color, [x + 6, y + 8, 18, 10])
-
 
 # Config
 lights_on = True
@@ -121,15 +117,11 @@ while not done:
         for s in stars:
             pygame.draw.ellipse(screen, WHITE, s)
 
-
-
-
     pygame.draw.rect(screen, field_color, [0, 180, 800 , 420])
     pygame.draw.rect(screen, stripe_color, [0, 180, 800, 42])
     pygame.draw.rect(screen, stripe_color, [0, 264, 800, 52])
     pygame.draw.rect(screen, stripe_color, [0, 368, 800, 62])
     pygame.draw.rect(screen, stripe_color, [0, 492, 800, 82])
-
 
     '''fence'''
     y = 170
@@ -150,13 +142,10 @@ while not done:
         pygame.draw.ellipse(screen, WHITE, [520, 50, 40, 40]) 
         pygame.draw.ellipse(screen, sky_color, [530, 45, 40, 40])
 
-    
-    
     for c in clouds:
         draw_cloud(c[0], c[1])
     screen.blit(SEE_THROUGH, (0, 0))   
     
-
     #out of bounds lines
     pygame.draw.line(screen, WHITE, [0, 580], [800, 580], 5)
     #left
@@ -182,7 +171,6 @@ while not done:
     #score board
     pygame.draw.rect(screen, BLACK, [300, 40, 200, 90])
     pygame.draw.rect(screen, WHITE, [302, 42, 198, 88], 2)
-
 
     #goal
     pygame.draw.rect(screen, WHITE, [320, 140, 160, 80], 5)
@@ -210,21 +198,6 @@ while not done:
         pygame.draw.ellipse(screen, light_color, [x + 20, 20, 20, 20])
     pygame.draw.line(screen, GRAY, [110, 20], [210, 20], 2)
 
-    #lights
-    # pygame.draw.line(screen, GRAY, [110, 60], [210, 60], 2)
-    # pygame.draw.ellipse(screen, light_color, [110, 40, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [130, 40, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [150, 40, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [170, 40, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [190, 40, 20, 20])
-    # pygame.draw.line(screen, GRAY, [110, 40], [210, 40], 2)
-    # pygame.draw.ellipse(screen, light_color, [110, 20, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [130, 20, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [150, 20, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [170, 20, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [190, 20, 20, 20])
-    # pygame.draw.line(screen, GRAY, [110, 20], [210, 20], 2)
-
     #light pole 2
     pygame.draw.rect(screen, GRAY, [630, 60, 20, 140])
     pygame.draw.ellipse(screen, GRAY, [630, 195, 20, 10])
@@ -237,21 +210,6 @@ while not done:
     for x in range(570, 670, 20):
         pygame.draw.ellipse(screen, light_color, [x + 20, 20, 20, 20])
     pygame.draw.line(screen, GRAY, [590, 20], [690, 20], 2)
-
-    #lights      
-    # pygame.draw.line(screen, GRAY, [590, 60], [690, 60], 2)
-    # pygame.draw.ellipse(screen, light_color, [590, 40, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [610, 40, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [630, 40, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [650, 40, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [670, 40, 20, 20])
-    # pygame.draw.line(screen, GRAY, [590, 40], [690, 40], 2)
-    # pygame.draw.ellipse(screen, light_color, [590, 20, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [610, 20, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [630, 20, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [650, 20, 20, 20])
-    # pygame.draw.ellipse(screen, light_color, [670, 20, 20, 20])
-    # pygame.draw.line(screen, GRAY, [590, 20], [690, 20], 2)
 
     #net part 1 (middle left vertical lines) 
     y = 338
@@ -336,32 +294,36 @@ while not done:
     # pygame.draw.line(screen, WHITE, [480, 140], [462, 202], 1)
 
     #net part 4
-    pygame.draw.line(screen, WHITE, [324, 144], [476, 144], 1)
-    pygame.draw.line(screen, WHITE, [324, 148], [476, 148], 1)
-    pygame.draw.line(screen, WHITE, [324, 152], [476, 152], 1)
-    pygame.draw.line(screen, WHITE, [324, 156], [476, 156], 1)
-    pygame.draw.line(screen, WHITE, [324, 160], [476, 160], 1)
-    pygame.draw.line(screen, WHITE, [324, 164], [476, 164], 1)
-    pygame.draw.line(screen, WHITE, [324, 168], [476, 168], 1)
-    pygame.draw.line(screen, WHITE, [324, 172], [476, 172], 1)
-    pygame.draw.line(screen, WHITE, [324, 176], [476, 176], 1)
+    # pygame.draw.line(screen, WHITE, [324, 144], [476, 144], 1)
+    # pygame.draw.line(screen, WHITE, [324, 148], [476, 148], 1)
+    # pygame.draw.line(screen, WHITE, [324, 152], [476, 152], 1)
+    # pygame.draw.line(screen, WHITE, [324, 156], [476, 156], 1)
+    # pygame.draw.line(screen, WHITE, [324, 160], [476, 160], 1)
+    # pygame.draw.line(screen, WHITE, [324, 164], [476, 164], 1)
+    # pygame.draw.line(screen, WHITE, [324, 168], [476, 168], 1)
+    # pygame.draw.line(screen, WHITE, [324, 172], [476, 172], 1)
+    # pygame.draw.line(screen, WHITE, [324, 176], [476, 176], 1)
+    # pygame.draw.line(screen, WHITE, [335, 180], [470, 180], 1)
+    # pygame.draw.line(screen, WHITE, [335, 184], [465, 184], 1)
+    # pygame.draw.line(screen, WHITE, [335, 188], [465, 188], 1)
+    # pygame.draw.line(screen, WHITE, [335, 192], [465, 192], 1)
+    # pygame.draw.line(screen, WHITE, [335, 196], [465, 196], 1)
+    for y in range(144, 176, 4):
+        pygame.draw.line(screen, WHITE, [324, y+4], [476, y+4], 1)
     pygame.draw.line(screen, WHITE, [335, 180], [470, 180], 1)
-    pygame.draw.line(screen, WHITE, [335, 184], [465, 184], 1)
-    pygame.draw.line(screen, WHITE, [335, 188], [465, 188], 1)
-    pygame.draw.line(screen, WHITE, [335, 192], [465, 192], 1)
-    pygame.draw.line(screen, WHITE, [335, 196], [465, 196], 1)
+    for y in range(176, 196, 4):
+         pygame.draw.line(screen, WHITE, [335, y+4], [465, y+4], 1)
+    
 
     #stands right
     pygame.draw.polygon(screen, RED, [[680, 220], [800, 340], [800, 290], [680, 180]])
     pygame.draw.polygon(screen, WHITE, [[680, 180], [800, 100], [800, 290]])
 
-  
     #stands left
     pygame.draw.polygon(screen, RED, [[120, 220], [0, 340], [0, 290], [120, 180]])
     pygame.draw.polygon(screen, WHITE, [[120, 180], [0, 100], [0, 290]])
     #people
     
-
     #corner flag right
     pygame.draw.line(screen, BRIGHT_YELLOW, [140, 220], [135, 190], 3)
     pygame.draw.polygon(screen, RED, [[132, 190], [125, 196], [135, 205]])
@@ -380,14 +342,11 @@ while not done:
     #pygame.draw.arc(screen, ORANGE, [100, 100, 100, 100], 0, math.pi/2, 1)
     #pygame.draw.arc(screen, BLACK, [100, 100, 100, 100], 0, math.pi/2, 50)
 
-
     # Update screen (Actually draw the picture in the window.)
     pygame.display.flip()
 
-
     # Limit refresh rate of game loop 
     clock.tick(refresh_rate)
-
 
 # Close window and quit
 pygame.quit()
