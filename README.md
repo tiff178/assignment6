@@ -6,4 +6,4 @@ Tiffany Truong, Katie Pham, Zoey Nguyen
   - Re-organized Folders
   - Deleted duplicate files
   - Refactored files:
-    - graphics_v4.py
+    - graphics_v4.py (lights on the light pole, all parts of net)
