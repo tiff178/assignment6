@@ -311,20 +311,26 @@ while not done:
     pygame.draw.line(screen, WHITE, [480, 140], [462, 202], 1)
 
     #net part 4
-    pygame.draw.line(screen, WHITE, [324, 144], [476, 144], 1)
-    pygame.draw.line(screen, WHITE, [324, 148], [476, 148], 1)
-    pygame.draw.line(screen, WHITE, [324, 152], [476, 152], 1)
-    pygame.draw.line(screen, WHITE, [324, 156], [476, 156], 1)
-    pygame.draw.line(screen, WHITE, [324, 160], [476, 160], 1)
-    pygame.draw.line(screen, WHITE, [324, 164], [476, 164], 1)
-    pygame.draw.line(screen, WHITE, [324, 168], [476, 168], 1)
-    pygame.draw.line(screen, WHITE, [324, 172], [476, 172], 1)
-    pygame.draw.line(screen, WHITE, [324, 176], [476, 176], 1)
+    # pygame.draw.line(screen, WHITE, [324, 144], [476, 144], 1)
+    # pygame.draw.line(screen, WHITE, [324, 148], [476, 148], 1)
+    # pygame.draw.line(screen, WHITE, [324, 152], [476, 152], 1)
+    # pygame.draw.line(screen, WHITE, [324, 156], [476, 156], 1)
+    # pygame.draw.line(screen, WHITE, [324, 160], [476, 160], 1)
+    # pygame.draw.line(screen, WHITE, [324, 164], [476, 164], 1)
+    # pygame.draw.line(screen, WHITE, [324, 168], [476, 168], 1)
+    # pygame.draw.line(screen, WHITE, [324, 172], [476, 172], 1)
+    # pygame.draw.line(screen, WHITE, [324, 176], [476, 176], 1)
+    # pygame.draw.line(screen, WHITE, [335, 180], [470, 180], 1)
+    # pygame.draw.line(screen, WHITE, [335, 184], [465, 184], 1)
+    # pygame.draw.line(screen, WHITE, [335, 188], [465, 188], 1)
+    # pygame.draw.line(screen, WHITE, [335, 192], [465, 192], 1)
+    # pygame.draw.line(screen, WHITE, [335, 196], [465, 196], 1)
+    for y in range(144,176, 4):
+        pygame.draw.line(screen, WHITE, [324, y+4], [476,y+4], 1)
     pygame.draw.line(screen, WHITE, [335, 180], [470, 180], 1)
-    pygame.draw.line(screen, WHITE, [335, 184], [465, 184], 1)
-    pygame.draw.line(screen, WHITE, [335, 188], [465, 188], 1)
-    pygame.draw.line(screen, WHITE, [335, 192], [465, 192], 1)
-    pygame.draw.line(screen, WHITE, [335, 196], [465, 196], 1)
+    for y in range(176, 196, 4):
+         pygame.draw.line(screen, WHITE, [335, y+4], [465,y+4], 1)
+    
 
     #stands right
     pygame.draw.polygon(screen, RED, [[680, 220], [800, 340], [800, 290], [680, 180]])
