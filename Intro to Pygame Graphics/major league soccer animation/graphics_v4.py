@@ -211,55 +211,33 @@ while not done:
         pygame.draw.ellipse(screen, light_color, [x + 20, 20, 20, 20])
     pygame.draw.line(screen, GRAY, [590, 20], [690, 20], 2)
 
-    #net part 1 (middle left vertical lines) 
+    #net part 1 (vertical lines in the middle of the code) 
     y = 338
     for x in range(320, 360, 5):
         pygame.draw.line(screen, WHITE, [x+5, 140], [y+3, 200], 1)
         y += 3
 
-    # net part 1 (middle of the middle vertical lines)
     y = 361
     for x in range(360, 376, 4):
        pygame.draw.line(screen, WHITE, [x+4, 140], [y+4, 200], 1)
        y += 4
     for x in range(376, 420, 4):
         pygame.draw.line(screen, WHITE, [x+4, 140], [x+4, 200], 1)
+    
+    pygame.draw.line(screen, WHITE, [424, 140], [423, 200], 1)
 
-    # pygame.draw.line(screen, WHITE, [325, 140], [341, 200], 1)
-    # pygame.draw.line(screen, WHITE, [330, 140], [344, 200], 1)
-    # pygame.draw.line(screen, WHITE, [335, 140], [347, 200], 1)
-    # pygame.draw.line(screen, WHITE, [340, 140], [350, 200], 1)
-    # pygame.draw.line(screen, WHITE, [345, 140], [353, 200], 1)
-    # pygame.draw.line(screen, WHITE, [350, 140], [356, 200], 1)
-    # pygame.draw.line(screen, WHITE, [355, 140], [359, 200], 1)
-    # pygame.draw.line(screen, WHITE, [360, 140], [362, 200], 1)
-    # pygame.draw.line(screen, WHITE, [364, 140], [365, 200], 1)
-    # pygame.draw.line(screen, WHITE, [368, 140], [369, 200], 1)
-    # pygame.draw.line(screen, WHITE, [372, 140], [373, 200], 1)
-    # pygame.draw.line(screen, WHITE, [376, 140], [377, 200], 1)
-    # pygame.draw.line(screen, WHITE, [380, 140], [380, 200], 1)
-    # pygame.draw.line(screen, WHITE, [384, 140], [384, 200], 1)
-    # pygame.draw.line(screen, WHITE, [388, 140], [388, 200], 1)
-    # pygame.draw.line(screen, WHITE, [392, 140], [392, 200], 1)
-    # pygame.draw.line(screen, WHITE, [396, 140], [396, 200], 1)
-    # pygame.draw.line(screen, WHITE, [400, 140], [400, 200], 1)
-    # pygame.draw.line(screen, WHITE, [404, 140], [404, 200], 1)
-    # pygame.draw.line(screen, WHITE, [408, 140], [408, 200], 1)
-    # pygame.draw.line(screen, WHITE, [412, 140], [412, 200], 1)
-    # pygame.draw.line(screen, WHITE, [416, 140], [416, 200], 1)
-    # pygame.draw.line(screen, WHITE, [420, 140], [420, 200], 1)
-    # pygame.draw.line(screen, WHITE, [424, 140], [423, 200], 1)
-    # pygame.draw.line(screen, WHITE, [428, 140], [427, 200], 1)
-    # pygame.draw.line(screen, WHITE, [432, 140], [431, 200], 1)
-    # pygame.draw.line(screen, WHITE, [436, 140], [435, 200], 1)
-    # pygame.draw.line(screen, WHITE, [440, 140], [438, 200], 1)
-    # pygame.draw.line(screen, WHITE, [445, 140], [441, 200], 1)
-    # pygame.draw.line(screen, WHITE, [450, 140], [444, 200], 1)
-    # pygame.draw.line(screen, WHITE, [455, 140], [447, 200], 1)
-    # pygame.draw.line(screen, WHITE, [460, 140], [450, 200], 1)
-    # pygame.draw.line(screen, WHITE, [465, 140], [453, 200], 1)
-    # pygame.draw.line(screen, WHITE, [470, 140], [456, 200], 1)
-    # pygame.draw.line(screen, WHITE, [475, 140], [459, 200], 1)
+    y = 423
+    for x in range(424, 436, 4):
+       pygame.draw.line(screen, WHITE, [x+4, 140], [y+4, 200], 1)
+       y += 4
+
+    pygame.draw.line(screen, WHITE, [440, 140], [438, 200], 1)
+
+    y = 438
+    for x in range(440, 475, 5):
+        pygame.draw.line(screen, WHITE, [x+5, 140], [y+3, 200], 1)
+        y += 3
+    
 
     # net part 2
     y = 216
