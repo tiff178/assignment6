@@ -304,11 +304,11 @@ while not done:
     # pygame.draw.line(screen, WHITE, [335, 188], [465, 188], 1)
     # pygame.draw.line(screen, WHITE, [335, 192], [465, 192], 1)
     # pygame.draw.line(screen, WHITE, [335, 196], [465, 196], 1)
-    for y in range(144,176, 4):
-        pygame.draw.line(screen, WHITE, [324, y+4], [476,y+4], 1)
+    for y in range(144, 176, 4):
+        pygame.draw.line(screen, WHITE, [324, y+4], [476, y+4], 1)
     pygame.draw.line(screen, WHITE, [335, 180], [470, 180], 1)
     for y in range(176, 196, 4):
-         pygame.draw.line(screen, WHITE, [335, y+4], [465,y+4], 1)
+         pygame.draw.line(screen, WHITE, [335, y+4], [465, y+4], 1)
     
 
     #stands right
