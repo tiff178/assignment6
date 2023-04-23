@@ -13,11 +13,9 @@ TITLE = "Major League Soccer"
 screen = pygame.display.set_mode(SIZE)
 pygame.display.set_caption(TITLE)
 
-
 # Timer
 clock = pygame.time.Clock()
 refresh_rate = 60
-
 
 # Colors
 ''' add colors you use as RGB values here '''
@@ -51,7 +49,6 @@ def draw_cloud(x, y):
     pygame.draw.ellipse(SEE_THROUGH, cloud_color, [x + 10, y, 16, 16])
     pygame.draw.ellipse(SEE_THROUGH, cloud_color, [x + 20, y + 8, 10, 10])
     pygame.draw.rect(SEE_THROUGH, cloud_color, [x + 6, y + 8, 18, 10])
-
 
 # Config
 lights_on = True
@@ -118,31 +115,21 @@ while not done:
         for s in stars:
             pygame.draw.ellipse(screen, WHITE, s)
 
-
-
-
     pygame.draw.rect(screen, field_color, [0, 180, 800 , 420])
     pygame.draw.rect(screen, stripe_color, [0, 180, 800, 42])
     pygame.draw.rect(screen, stripe_color, [0, 264, 800, 52])
     pygame.draw.rect(screen, stripe_color, [0, 368, 800, 62])
     pygame.draw.rect(screen, stripe_color, [0, 492, 800, 82])
 
-
-
-    
-
     if day:
         pygame.draw.ellipse(screen, BRIGHT_YELLOW, [520, 50, 40, 40])
     else:
         pygame.draw.ellipse(screen, WHITE, [520, 50, 40, 40]) 
         pygame.draw.ellipse(screen, sky_color, [530, 45, 40, 40])
-
     
     #screen.blit(SEE_THROUGH, (0, 0))
     for c in clouds:
         draw_cloud(c[0], c[1])
-        
-    
 
     #out of bounds lines
     pygame.draw.line(screen, WHITE, [0, 580], [800, 580], 5)
@@ -167,7 +154,6 @@ while not done:
     pygame.draw.rect(screen, BLACK, [300, 40, 200, 90])
     pygame.draw.rect(screen, WHITE, [302, 42, 198, 88], 2)
 
-
     #goal
     pygame.draw.rect(screen, WHITE, [320, 140, 160, 80], 5)
     pygame.draw.line(screen, WHITE, [340, 200], [460, 200], 3)
@@ -185,40 +171,26 @@ while not done:
     pygame.draw.rect(screen, GRAY, [150, 60, 20, 140])
     pygame.draw.ellipse(screen, GRAY, [150, 195, 20, 10])
 
-    #lights
+    #lights (refactored) - left side of image
     pygame.draw.line(screen, GRAY, [110, 60], [210, 60], 2)
-    pygame.draw.ellipse(screen, light_color, [110, 40, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [130, 40, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [150, 40, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [170, 40, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [190, 40, 20, 20])
+    for x in range(90, 190, 20):
+        pygame.draw.ellipse(screen, light_color, [x + 20, 40, 20, 20])
     pygame.draw.line(screen, GRAY, [110, 40], [210, 40], 2)
-    pygame.draw.ellipse(screen, light_color, [110, 20, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [130, 20, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [150, 20, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [170, 20, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [190, 20, 20, 20])
+    for x in range(90, 190, 20):
+        pygame.draw.ellipse(screen, light_color, [x + 20, 20, 20, 20])
     pygame.draw.line(screen, GRAY, [110, 20], [210, 20], 2)
 
     #light pole 2
     pygame.draw.rect(screen, GRAY, [630, 60, 20, 140])
     pygame.draw.ellipse(screen, GRAY, [630, 195, 20, 10])
 
-    #lights
-
-        
+    #lights (refactored) - right side of image
     pygame.draw.line(screen, GRAY, [590, 60], [690, 60], 2)
-    pygame.draw.ellipse(screen, light_color, [590, 40, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [610, 40, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [630, 40, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [650, 40, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [670, 40, 20, 20])
+    for x in range(570, 670, 20):
+        pygame.draw.ellipse(screen, light_color, [x + 20, 40, 20, 20])
     pygame.draw.line(screen, GRAY, [590, 40], [690, 40], 2)
-    pygame.draw.ellipse(screen, light_color, [590, 20, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [610, 20, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [630, 20, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [650, 20, 20, 20])
-    pygame.draw.ellipse(screen, light_color, [670, 20, 20, 20])
+    for x in range(570, 670, 20):
+        pygame.draw.ellipse(screen, light_color, [x + 20, 20, 20, 20])
     pygame.draw.line(screen, GRAY, [590, 20], [690, 20], 2)
 
     #net
