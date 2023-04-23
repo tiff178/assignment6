@@ -1,8 +1,9 @@
-# Assignment 6 
+# CS 2520: Assignment 6 
+
 Member Names:
 Tiffany Truong, Katie Pham, Zoey Nguyen
-
-hi! hello
-
-test again.... 
-plz work
+- **Changes Made**: 
+  - Re-organized Folders
+  - Deleted duplicate files
+  - Refactored files:
+    - graphics_v4.py
