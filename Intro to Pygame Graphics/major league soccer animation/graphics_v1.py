@@ -182,7 +182,7 @@ while not done:
         pygame.draw.line(screen, WHITE, [320, 140], [x+2, y-2], 1)
         y -= 2
     
-    #net part 3 (refacotred/shortened code) - while net of the right side of the goal
+    #net part 3 (refactored/shortened code) - while net of the right side of the goal
     x = 476
     for y in range(216, 202, -2):
         pygame.draw.line(screen, WHITE, [480, 140], [x-2, y-2], 1)
