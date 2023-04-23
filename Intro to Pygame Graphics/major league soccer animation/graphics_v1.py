@@ -154,7 +154,7 @@ while not done:
         pygame.draw.ellipse(screen, light_color, [x + 20, 20, 20, 20])
     pygame.draw.line(screen, GRAY, [590, 20], [690, 20], 2)
 
-      #net part 1 (refactored/shotrened code) - vertical lines of midddle portion of the goal
+    #net part 1 (refactored/shotrened code) - vertical lines of midddle portion of the goal
     y = 338
     for x in range(320, 360, 5):
         pygame.draw.line(screen, WHITE, [x+5, 140], [y+3, 200], 1)
