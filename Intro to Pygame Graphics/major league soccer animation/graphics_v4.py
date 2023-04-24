@@ -212,26 +212,17 @@ while not done:
     pygame.draw.line(screen, GRAY, [590, 20], [690, 20], 2)
 
     #net part 1 (refactored/shotrened code) - vertical lines of midddle portion of the goal
-    y = 338
-    for x in range(320, 360, 5):
-        pygame.draw.line(screen, WHITE, [x+5, 140], [y+3, 200], 1)
-        y += 3
-    y = 361
-    for x in range(360, 376, 4):
-       pygame.draw.line(screen, WHITE, [x+4, 140], [y+4, 200], 1)
-       y += 4
-    for x in range(376, 420, 4):
-        pygame.draw.line(screen, WHITE, [x+4, 140], [x+4, 200], 1)
+    def draw_net(x, y, z, n, m):
+        for x in range(x, z, n):
+            pygame.draw.line(screen, WHITE, [x+n, 140], [y+m, 200], 1)
+            y += m
+    draw_net(320, 338, 360, 5, 3)
+    draw_net(360, 361, 376, 4, 4)
+    draw_net(376, 376, 420, 4, 4)
     pygame.draw.line(screen, WHITE, [424, 140], [423, 200], 1)
-    y = 423
-    for x in range(424, 436, 4):
-       pygame.draw.line(screen, WHITE, [x+4, 140], [y+4, 200], 1)
-       y += 4
+    draw_net(424, 423, 436, 4, 4)
     pygame.draw.line(screen, WHITE, [440, 140], [438, 200], 1)
-    y = 438
-    for x in range(440, 475, 5):
-        pygame.draw.line(screen, WHITE, [x+5, 140], [y+3, 200], 1)
-        y += 3
+    draw_net(440, 438, 475, 5, 3)
     
     # net part 2 (refactored/shortened code) - whole net of left side of the goal
     y = 216
