@@ -44,6 +44,10 @@ SEE_THROUGH.set_alpha(150)
 SEE_THROUGH.fill((124, 118, 135))
 
 def draw_cloud(x, y):
+    '''documentation here
+        what the code does:
+        param x: what that is
+        param y: what that is'''
     pygame.draw.ellipse(SEE_THROUGH, cloud_color, [x, y + 8, 10, 10])
     pygame.draw.ellipse(SEE_THROUGH, cloud_color, [x + 6, y + 4, 8, 8])
     pygame.draw.ellipse(SEE_THROUGH, cloud_color, [x + 10, y, 16, 16])
