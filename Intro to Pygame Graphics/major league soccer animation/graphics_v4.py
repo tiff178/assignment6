@@ -173,12 +173,15 @@ while not done:
     pygame.draw.rect(screen, WHITE, [302, 42, 198, 88], 2)
 
     #goal
-    pygame.draw.rect(screen, WHITE, [320, 140, 160, 80], 5)
-    pygame.draw.line(screen, WHITE, [340, 200], [460, 200], 3)
-    pygame.draw.line(screen, WHITE, [320, 220], [340, 200], 3)
-    pygame.draw.line(screen, WHITE, [480, 220], [460, 200], 3)
-    pygame.draw.line(screen, WHITE, [320, 140], [340, 200], 3)
-    pygame.draw.line(screen, WHITE, [480, 140], [460, 200], 3)
+    def draw_goal():
+        pygame.draw.rect(screen, WHITE, [320, 140, 160, 80], 5)
+        pygame.draw.line(screen, WHITE, [340, 200], [460, 200], 3)
+        pygame.draw.line(screen, WHITE, [320, 220], [340, 200], 3)
+        pygame.draw.line(screen, WHITE, [480, 220], [460, 200], 3)
+        pygame.draw.line(screen, WHITE, [320, 140], [340, 200], 3)
+        pygame.draw.line(screen, WHITE, [480, 140], [460, 200], 3)
+    
+    draw_goal()
 
     #6 yard line goal box
     pygame.draw.line(screen, WHITE, [310, 220], [270, 270], 3)
