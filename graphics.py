@@ -1,4 +1,3 @@
-
 # Imports
 import pygame
 import math
@@ -71,8 +70,6 @@ def draw_cloud(x, y):
     pygame.draw.ellipse(SEE_THROUGH, cloud_color, [x + 10, y, 16, 16])
     pygame.draw.ellipse(SEE_THROUGH, cloud_color, [x + 20, y + 8, 10, 10])
     pygame.draw.rect(SEE_THROUGH, cloud_color, [x + 6, y + 8, 18, 10])
-
-
     
 # Game loop
 done = False
@@ -129,6 +126,7 @@ while not done:
     pygame.draw.rect(screen, stripe_color, [0, 264, 800, 52])
     pygame.draw.rect(screen, stripe_color, [0, 368, 800, 62])
     pygame.draw.rect(screen, stripe_color, [0, 492, 800, 82])
+
 
     '''fence'''
     y = 170
