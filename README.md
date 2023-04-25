@@ -8,4 +8,4 @@ Tiffany Truong, Katie Pham, Zoey Nguyen
   - Refactored files:
     - graphics_v1-graphics_v5.py (lights on the light pole, all parts of net, added function for net part 1)
 
-Repo Link: https://github.com/tiff178/assignment6
+Repo Link: (https://github.com/tiff178/assignment6)
