@@ -10,4 +10,4 @@ Tiffany Truong, Katie Pham, Thu Nguyen
       - Added functions with documentation and organized the code to make it more clear, concise, and reusable
       - Used Git for collboration and track all the changes + resolve conflicts during development
 
-Repo Link: https://github.com/tiff178/assignment6
+[Repo Link]: (https://github.com/tiff178/assignment6)
