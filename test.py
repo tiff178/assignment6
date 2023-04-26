@@ -373,13 +373,7 @@ while not done:
 
     stands()
 
-    stands()
-
-
     flag()
-
-    flag()
-
 
     # DARKNESS
     if not day and not lights_on:
