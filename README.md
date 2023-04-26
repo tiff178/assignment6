@@ -2,7 +2,7 @@
 
 Member Names:
 Tiffany Truong, Katie Pham, Thu Nguyen
-**Changes Made**: 
+- **Changes Made**: 
   - Re-organized folders
   - Deleted duplicate files and any unnecessary files
   - Refactored file: graphics_v4.py
