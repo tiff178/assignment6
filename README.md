@@ -11,7 +11,6 @@ Tiffany Truong, Katie Pham, Thu Nguyen
       - Used Git for collboration and track all the changes + resolve conflicts during development
 
 [Repository Link - Assignment 6: Group 4](https://github.com/tiff178/assignment6)
-
 ```python
 # Imports
 import pygame
@@ -386,4 +385,5 @@ while not done:
     clock.tick(refresh_rate)
 
 # Close window and quit
-pygame.quit()```
+pygame.quit()
+```
