@@ -37,7 +37,7 @@ def draw_fence():
         pygame.draw.ellipse(screen, WHITE, [520, 50, 40, 40]) 
         pygame.draw.ellipse(screen, sky_color, [530, 45, 40, 40])
 
-def boundary_lines():
+def draw_boundary_lines():
     '''This function draws all the out of bounds lines in the soccer field and the penalty box is not included
         This function takes no parameters'''
     
@@ -60,7 +60,7 @@ def boundary_lines():
     #arc at the top of the goal box
     pygame.draw.arc(screen, WHITE, [330, 280, 140, 40], math.pi, 2 * math.pi, 5)
 
-def score_area():
+def draw_score_area():
     '''This function draws the entire scoring area of the field including the poles and scoreboard
         This function takes no parameters'''
     
@@ -87,7 +87,7 @@ def draw_goal():
     pygame.draw.line(screen, WHITE, [270, 270], [530, 270], 2)
     pygame.draw.line(screen, WHITE, [530, 270], [490, 220], 3)
 
-def lights():
+def draw_lights():
     '''This function draws the lights and light poles on the back sides of the field
         This function takes no parameters'''
 
@@ -152,7 +152,7 @@ def draw_net2():
     for y in range(176, 196, 4):
         pygame.draw.line(screen, WHITE, [335, y+4], [465, y+4], 1)
 
-def stands():
+def draw_stands():
     '''This function draws the two stands at the side of teh screen meant for the audience
         This function takes no parameters'''
     
@@ -164,7 +164,7 @@ def stands():
     pygame.draw.polygon(screen, RED, [[120, 220], [0, 340], [0, 290], [120, 180]])
     pygame.draw.polygon(screen, WHITE, [[120, 180], [0, 100], [0, 290]])
 
-def flag():
+def draw_flag():
     '''This function draws both of the flags at the sides of the field
         This function takes no parameters'''
     
@@ -330,13 +330,13 @@ while not done:
         draw_cloud(c[0], c[1])
     screen.blit(SEE_THROUGH, (0, 0))   
     
-    boundary_lines() # Call the function boundary_lines
+    draw_boundary_lines() # Call the function draw_boundary_lines
         
-    score_area() # Call the function score_area 
+    draw_score_area() # Call the function score_area 
     
     draw_goal() # Call the function draw_goal
         
-    lights() # Call the lights function
+    draw_lights() # Call the lights function
     
     # Call the draw_net function - the main net drawing
     draw_net(320, 338, 360, 5, 3)
@@ -349,9 +349,9 @@ while not done:
     
     draw_net2() # Call the draw_net2 function - draw the rest of the lines for the net
     
-    stands() # Call the stands function
+    draw_stands() # Call the stands function
 
-    flag() # Call the flag function
+    draw_flag() # Call the flag function
 
     # DARKNESS
     if not day and not lights_on:
