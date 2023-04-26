@@ -2,9 +2,10 @@
 import pygame
 import math
 import random
-  
+
+# Create functions
 def draw_cloud(x, y):
-    '''this piece of code is the function to draw the clouds that stay consistent through the program
+    '''This piece of code is the function to draw the clouds that stay consistent through the program
         param x: the value taken in for the smaller part of the ellipse shape of the cloud
         param y: the value taken in for the longer part of the ellipse shape of the cloud'''
     
@@ -13,11 +14,10 @@ def draw_cloud(x, y):
     pygame.draw.ellipse(SEE_THROUGH, cloud_color, [x + 10, y, 16, 16])
     pygame.draw.ellipse(SEE_THROUGH, cloud_color, [x + 20, y + 8, 10, 10])
     pygame.draw.rect(SEE_THROUGH, cloud_color, [x + 6, y + 8, 18, 10])
-    
 
 def draw_fence():
     '''This function draws the entire back fence in the field
-    This function takes no parameters'''
+        This function takes no parameters'''
 
     y = 170
     for x in range(5, 800, 30):
@@ -36,7 +36,6 @@ def draw_fence():
     else:
         pygame.draw.ellipse(screen, WHITE, [520, 50, 40, 40]) 
         pygame.draw.ellipse(screen, sky_color, [530, 45, 40, 40])
-
 
 def boundary_lines():
     '''This function draws all the out of bounds lines in the soccer field and the penalty box is not included
@@ -91,7 +90,7 @@ def draw_goal():
 
 def lights():
     '''This function draws the lights and light poles on the back sides of the field
-    This function takes no parameters'''
+        This function takes no parameters'''
 
     #light pole 1
     pygame.draw.rect(screen, GRAY, [150, 60, 20, 140])
@@ -118,7 +117,6 @@ def lights():
     for x in range(570, 670, 20):
         pygame.draw.ellipse(screen, light_color, [x + 20, 20, 20, 20])
     pygame.draw.line(screen, GRAY, [590, 20], [690, 20], 2)
-
 
 def draw_net(x, y, z, n, m):
     '''This function draws only the vertical lines of the middle portion of the goal
@@ -200,7 +198,6 @@ def daynight(lights_on, day):
         stripe_color = NIGHT_GREEN
         cloud_color = NIGHT_GRAY
 
-
 #From here on is the main function of the code
 
 # Initialize game engine
@@ -262,8 +259,6 @@ for i in range(20):
     x = random.randrange(-100, 1600)
     y = random.randrange(0, 150)
     clouds.append([x, y])
-
-
 
 done = False
 while not done:
@@ -332,27 +327,21 @@ while not done:
     pygame.draw.rect(screen, stripe_color, [0, 368, 800, 62])
     pygame.draw.rect(screen, stripe_color, [0, 492, 800, 82])
 
-    
     draw_fence()
 
-    
     for c in clouds:
         draw_cloud(c[0], c[1])
     screen.blit(SEE_THROUGH, (0, 0))   
     
     boundary_lines()
         
-    
     score_area()
     
-
     #goal
     draw_goal()
         
-    
     lights()
         
-    
     draw_net(320, 338, 360, 5, 3)
     draw_net(360, 361, 376, 4, 4)
     draw_net(376, 376, 420, 4, 4)
@@ -363,7 +352,6 @@ while not done:
     
     draw_net2()
     
-
     stands()
 
     flag()
