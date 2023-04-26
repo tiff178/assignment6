@@ -71,7 +71,6 @@ def score_area():
     pygame.draw.rect(screen, BLACK, [300, 40, 200, 90])
     pygame.draw.rect(screen, WHITE, [302, 42, 198, 88], 2)
 
-#goal
 def draw_goal():
     '''This function draws the outline of the goal (not the net)
     This function takes no parameters'''
@@ -198,8 +197,7 @@ def daynight(lights_on, day):
         stripe_color = NIGHT_GREEN
         cloud_color = NIGHT_GRAY
 
-#From here on is the main function of the code
-
+# -- Main Code to run Graphics --
 # Initialize game engine
 pygame.init()
 
@@ -245,7 +243,6 @@ lights_on = True
 day = True
 
 daynight(lights_on, day)
-
 
 stars = []
 for n in range(200):
@@ -317,7 +314,7 @@ while not done:
     SEE_THROUGH.set_colorkey(ck)
     
     if not day:
-    #stars
+    # stars
         for s in stars:
             pygame.draw.ellipse(screen, WHITE, s)
 
@@ -327,21 +324,21 @@ while not done:
     pygame.draw.rect(screen, stripe_color, [0, 368, 800, 62])
     pygame.draw.rect(screen, stripe_color, [0, 492, 800, 82])
 
-    draw_fence()
+    draw_fence() # Call the function draw_fence
 
-    for c in clouds:
+    for c in clouds: # Call the function draw_could to draw clouds for the sky (Light/Dark)
         draw_cloud(c[0], c[1])
     screen.blit(SEE_THROUGH, (0, 0))   
     
-    boundary_lines()
+    boundary_lines() # Call the function boundary_lines
         
-    score_area()
+    score_area() # Call the function score_area 
     
-    #goal
-    draw_goal()
+    draw_goal() # Call the function draw_goal
         
-    lights()
-        
+    lights() # Call the lights function
+    
+    # Call the draw_net function - the main net drawing
     draw_net(320, 338, 360, 5, 3)
     draw_net(360, 361, 376, 4, 4)
     draw_net(376, 376, 420, 4, 4)
@@ -350,11 +347,11 @@ while not done:
     pygame.draw.line(screen, WHITE, [440, 140], [438, 200], 1)
     draw_net(440, 438, 475, 5, 3)
     
-    draw_net2()
+    draw_net2() # Call the draw_net2 function - draw the rest of the lines for the net
     
-    stands()
+    stands() # Call the stands function
 
-    flag()
+    flag() # Call the flag function
 
     # DARKNESS
     if not day and not lights_on:
